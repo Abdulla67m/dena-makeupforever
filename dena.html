@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dena Makeup Forever | Luxury Original Cosmetics</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="dena.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <div class="top-bar">
+        <span>
+            ✨ 100% Guaranteed Original Luxury Makeup |
+            Free Shipping on Orders Over EGP 5,000
+        </span>
+    </div>
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#home"
+               class="brand-logo"
+               onclick="showSection('home')">
+                Dena Makeup <span>Forever</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home"
+                       id="nav-home"
+                       class="nav-item active"
+                       onclick="showSection('home')">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#store"
+                       id="nav-store"
+                       class="nav-item"
+                       onclick="showSection('store')">
+                        Web Store
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about"
+                       id="nav-about"
+                       class="nav-item"
+                       onclick="showSection('about')">
+                        Our Authenticity
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact"
+                       id="nav-contact"
+                       class="nav-item"
+                       onclick="showSection('contact')">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="nav-actions">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="global-search"
+                        placeholder="Search products..."
+                        onkeyup="handleSearch(this.value)"
+                    >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
+                <button
+                    class="cart-btn"
+                    onclick="toggleCart()">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="cart-badge"
+                        id="cart-count">
+                        0
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HOME SECTION
+========================================================= -->
+
+<main id="home-section" class="page-section">
+
+    <!-- HERO -->
+
+    <section class="hero-banner">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="sub-title">
+                Haute Couture Beauty
+            </span>
+
+            <h1 class="main-heading">
+                Unveil Your True Radiance
+            </h1>
+
+            <p>
+                Discover hand-picked, 100% authentic collections
+                from Huda Beauty, Natasha Denona,
+                Makeup By Mario & more.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button
+                    class="btn btn-primary"
+                    onclick="showSection('store')">
+                    Shop Full Collection
+                </button>
+
+                <button
+                    class="btn btn-outline"
+                    onclick="scrollToElement('trending')">
+                    View Bestsellers
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BRANDS -->
+
+    <div class="brands-bar">
+
+        <span class="brand-tag">
+            MAKEUP BY MARIO
+        </span>
+
+        <span class="brand-tag">
+            HUDA BEAUTY
+        </span>
+
+        <span class="brand-tag">
+            NATASHA DENONA
+        </span>
+
+        <span class="brand-tag">
+            ONE/SIZE
+        </span>
+
+        <span class="brand-tag">
+            CHARLOTTE TILBURY
+        </span>
+
+        <span class="brand-tag">
+            RHODE
+        </span>
+
+    </div>
+
+
+    <!-- FEATURED -->
+
+    <section class="featured-section container">
+
+        <div class="section-header text-center">
+
+            <h2>
+                Curated Luxury Highlights
+            </h2>
+
+            <div class="gold-divider"></div>
+
+        </div>
+
+
+        <div class="highlights-grid">
+
+            <div class="highlight-card item-large">
+
+                <img
+                    src="images/huda-concealer.jpeg"
+                    alt="Master Mattes Collection"
+                >
+
+                <div class="card-overlay">
+
+                    <span class="card-label">
+                        MAKEUP COLLECTION
+                    </span>
+
+                    <h3>
+                        Master Mattes Collection
+                    </h3>
+
+                    <p>
+                        Essential neutral tones engineered
+                        for every skin shade.
+                    </p>
+
+                    <button
+                        class="btn btn-sm"
+                        onclick="showSection('store')">
+
+                        Explore Palettes
+
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRENDING -->
+
+    <section
+        id="trending"
+        class="trending-section container">
+
+        <div class="section-header">
+
+            <h2>
+                Bestsellers & Trending Now
+            </h2>
+
+            <a
+                href="#store"
+                onclick="showSection('store')"
+                class="view-all">
+
+                View All Products →
+
+            </a>
+
+        </div>
+
+
+        <!-- Products will be generated by JS -->
+
+        <div
+            class="product-grid"
+            id="home-bestsellers-grid">
+        </div>
+
+    </section>
+
+
+    <!-- OFFER -->
+
+    <section class="offer-banner container">
+
+        <div class="offer-content">
+
+            <span class="badge-gold">
+                Special Limited Deal
+            </span>
+
+            <h2>
+                The Ultimate Glow Bundle
+            </h2>
+
+            <p>
+                Get Huda Beauty Easy Blur +
+                ONE/SIZE Setting Spray at 20% OFF.
+            </p>
+
+            <div
+                class="timer"
+                id="offer-timer">
+                Ends in: 12h 44m 10s
+            </div>
+
+            <button
+                class="btn btn-primary"
+                onclick="addBundleToCart()">
+
+                Claim Bundle Offer
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     STORE SECTION
+========================================================= -->
+
+<main
+    id="store-section"
+    class="page-section d-none">
+
+    <div class="store-header container">
+
+        <h1>
+            Official Web Store
+        </h1>
+
+        <p>
+            Explore our full catalog of
+            100% verified original makeup products.
+        </p>
+
+    </div>
+
+
+    <div class="store-container container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="store-sidebar">
+
+            <!-- CATEGORIES -->
+
+            <div class="filter-group">
+
+                <h4>
+                    Categories
+                </h4>
+
+                <ul class="filter-list">
+
+                    <li>
+                        <button
+                            class="filter-link active"
+                            onclick="filterCategory('all', this)">
+                            All Products
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            class="filter-link"
+                            onclick="filterCategory('Face', this)">
+                            Complexion & Face
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            class="filter-link"
+                            onclick="filterCategory('Eyes', this)">
+                            Eyes & Eyeshadow
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            class="filter-link"
+                            onclick="filterCategory('Lips', this)">
+                            Lips & Glosses
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            class="filter-link"
+                            onclick="filterCategory('Setting', this)">
+                            Setting & Primers
+                        </button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- BRANDS -->
+
+            <div class="filter-group">
+
+                <h4>
+                    Brands
+                </h4>
+
+                <ul class="filter-list">
+
+                    <li>
+                        <button
+                            class="filter-link active"
+                            onclick="filterBrand('all', this)">
+                            All Brands
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            class="filter-link"
+                            onclick="filterBrand('Makeup By Mario', this)">
+                            Makeup By Mario
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            class="filter-link"
+                            onclick="filterBrand('Huda Beauty', this)">
+                            Huda Beauty
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            class="filter-link"
+                            onclick="filterBrand('Natasha Denona', this)">
+                            Natasha Denona
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            class="filter-link"
+                            onclick="filterBrand('ONE/SIZE', this)">
+                            ONE/SIZE
+                        </button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- PRICE -->
+
+            <div class="filter-group">
+
+                <h4>
+                    Max Price:
+                    <span id="price-val">
+                        EGP 5,000
+                    </span>
+                </h4>
+
+                <input
+                    type="range"
+                    id="price-range"
+                    min="500"
+                    max="5000"
+                    value="5000"
+                    step="100"
+                    oninput="filterByPrice(this.value)"
+                >
+
+            </div>
+
+        </aside>
+
+
+        <!-- PRODUCTS -->
+
+        <section class="store-products">
+
+            <div class="store-toolbar">
+
+                <span id="product-count">
+                    Showing 0 products
+                </span>
+
+                <select
+                    id="sort-select"
+                    onchange="sortProducts(this.value)">
+
+                    <option value="featured">
+                        Sort by: Featured
+                    </option>
+
+                    <option value="low-high">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high-low">
+                        Price: High to Low
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                class="product-grid"
+                id="store-products-grid">
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     CART
+========================================================= -->
+
+<div
+    class="cart-overlay"
+    id="cart-overlay"
+    onclick="toggleCart()">
+</div>
+
+
+<aside
+    class="cart-drawer"
+    id="cart-drawer">
+
+    <div class="cart-header">
+
+        <h3>
+            Your Shopping Bag
+        </h3>
+
+        <button
+            class="close-cart"
+            onclick="toggleCart()">
+            &times;
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-body"
+        id="cart-items">
+
+        <p class="text-center py-4">
+            Your bag is currently empty.
+        </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="summary-line">
+
+            <span>
+                Subtotal
+            </span>
+
+            <span id="cart-subtotal">
+                EGP 0
+            </span>
+
+        </div>
+
+
+        <div class="summary-line">
+
+            <span>
+                Estimated Shipping
+            </span>
+
+            <span id="cart-shipping">
+                EGP 500
+            </span>
+
+        </div>
+
+
+        <div class="summary-line total-line">
+
+            <span>
+                Total
+            </span>
+
+            <span id="cart-total">
+                EGP 0
+            </span>
+
+        </div>
+
+
+        <button
+            class="btn btn-primary btn-block"
+            onclick="openCheckout()">
+
+            Proceed to Checkout
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================================
+     CHECKOUT MODAL
+========================================================= -->
+
+<div
+    class="modal"
+    id="checkout-modal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-modal"
+            onclick="closeCheckout()">
+            &times;
+        </button>
+
+
+        <div class="checkout-grid">
+
+            <!-- FORM -->
+
+            <div class="checkout-form-area">
+
+                <h2>
+                    Secure Checkout
+                </h2>
+
+
+                <form
+                    id="payment-form"
+                    onsubmit="processPayment(event)">
+
+
+                    <!-- CONTACT -->
+
+                    <div class="form-section">
+
+                        <h4>
+                            1. Contact & Shipping Information
+                        </h4>
+
+
+                        <div class="input-group">
+
+                            <input
+                                type="text"
+                                placeholder="Full Name"
+                                required>
+
+                            <input
+                                type="email"
+                                placeholder="Email Address"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <input
+                                type="tel"
+                                placeholder="Phone Number"
+                                required>
+
+                            <input
+                                type="text"
+                                placeholder="Delivery Address & City"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PAYMENT -->
+
+                    <div class="form-section">
+
+                        <h4>
+                            2. Payment Gateway
+                        </h4>
+
+
+                        <div class="payment-options">
+
+                            <label class="payment-card">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="card"
+                                    checked
+                                    onclick="selectPayment('card')">
+
+                                <div class="card-details">
+
+                                    <i class="fa-solid fa-credit-card"></i>
+
+                                    <span>
+                                        Credit / Debit Card
+                                    </span>
+
+                                </div>
+
+                            </label>
+
+
+                            <label class="payment-card">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="instapay"
+                                    onclick="selectPayment('instapay')">
+
+                                <div class="card-details">
+
+                                    <i class="fa-solid fa-mobile-screen"></i>
+
+                                    <span>
+                                        InstaPay / Wallet
+                                    </span>
+
+                                </div>
+
+                            </label>
+
+
+                            <label class="payment-card">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="cod"
+                                    onclick="selectPayment('cod')">
+
+                                <div class="card-details">
+
+                                    <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                                    <span>
+                                        Cash on Delivery
+                                    </span>
+
+                                </div>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- CARD -->
+
+                        <div
+                            id="card-fields"
+                            class="payment-fields">
+
+                            <input
+                                type="text"
+                                placeholder="Cardholder Name">
+
+                            <input
+                                type="text"
+                                placeholder="Card Number">
+
+                            <div class="input-group">
+
+                                <input
+                                    type="text"
+                                    placeholder="MM/YY">
+
+                                <input
+                                    type="text"
+                                    placeholder="CVV">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- INSTAPAY -->
+
+                        <div
+                            id="instapay-fields"
+                            class="payment-fields d-none">
+
+                            <p class="instapay-info">
+
+                                Transfer total amount to InstaPay IPA:
+
+                                <strong>
+                                    denamakeup@instapay
+                                </strong>
+
+                                or Wallet
+
+                                <strong>
+                                    01000000000
+                                </strong>
+
+                            </p>
+
+                            <input
+                                type="text"
+                                placeholder="Transaction Reference ID">
+
+                        </div>
+
+
+                        <!-- COD -->
+
+                        <div
+                            id="cod-fields"
+                            class="payment-fields d-none">
+
+                            <p class="cod-info">
+
+                                Pay in cash when your package
+                                arrives at your doorstep.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary btn-block py-3">
+
+                        Complete Order & Pay
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+
+            <div class="checkout-summary">
+
+                <h3>
+                    Order Summary
+                </h3>
+
+                <div
+                    id="checkout-summary-list">
+                </div>
+
+                <hr>
+
+                <div class="summary-line">
+
+                    <span>
+                        Grand Total:
+                    </span>
+
+                    <strong
+                        id="modal-grand-total"
+                        class="gold-text">
+
+                        EGP 0
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="toast"
+    id="toast">
+</div>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<main
+    id="about-section"
+    class="page-section d-none">
+
+    <section class="info-hero">
+
+        <div class="container text-center">
+
+            <span class="sub-title">
+                100% Original Guarantee
+            </span>
+
+            <h1 class="font-heading">
+                Our Authenticity Promise
+            </h1>
+
+            <p class="max-600">
+
+                At Dena Makeup Forever,
+                we believe luxury beauty should never
+                be compromised by counterfeits.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="container py-5">
+
+        <div class="authenticity-grid">
+
+            <div class="auth-card">
+
+                <div class="auth-icon">
+                    <i class="fa-solid fa-certificate"></i>
+                </div>
+
+                <h3>
+                    Direct Manufacturer Sourcing
+                </h3>
+
+                <p>
+                    Every product in our catalog is sourced
+                    from trusted beauty distributors.
+                </p>
+
+            </div>
+
+
+            <div class="auth-card">
+
+                <div class="auth-icon">
+                    <i class="fa-solid fa-box"></i>
+                </div>
+
+                <h3>
+                    Batch Code Verification
+                </h3>
+
+                <p>
+                    We perform product and batch verification
+                    before products are listed.
+                </p>
+
+            </div>
+
+
+            <div class="auth-card">
+
+                <div class="auth-icon">
+                    <i class="fa-solid fa-temperature-arrow-down"></i>
+                </div>
+
+                <h3>
+                    Temperature-Controlled Storage
+                </h3>
+
+                <p>
+                    Cosmetics are stored carefully to
+                    preserve product quality.
+                </p>
+
+            </div>
+
+
+            <div class="auth-card">
+
+                <div class="auth-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <h3>
+                    Money-Back Guarantee
+                </h3>
+
+                <p>
+                    Contact our support team if you have
+                    any issue with your order.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="purity-seal text-center my-5">
+
+            <h2>
+                Never Counterfeit. Never Compromised.
+            </h2>
+
+            <p>
+                Luxury beauty with a premium shopping experience.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<main
+    id="contact-section"
+    class="page-section d-none">
+
+    <section class="info-hero">
+
+        <div class="container text-center">
+
+            <span class="sub-title">
+                We're Here For You
+            </span>
+
+            <h1 class="font-heading">
+                Get in Touch with Our Beauty Advisors
+            </h1>
+
+            <p class="max-600">
+
+                Have a question about product shade matching,
+                delivery times, or your order status?
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="container py-5">
+
+        <div class="contact-grid">
+
+            <!-- FORM -->
+
+            <div class="contact-form-card">
+
+                <h3>
+                    Send Us a Direct Message
+                </h3>
+
+
+                <form
+                    id="contact-form"
+                    onsubmit="submitContact(event)">
+
+                    <div class="form-group-custom">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="custom-input"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group-custom">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            class="custom-input"
+                            placeholder="name@example.com"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group-custom">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="custom-input"
+                            placeholder="+20 100 000 0000">
+
+                    </div>
+
+
+                    <div class="form-group-custom">
+
+                        <label>
+                            Message / Inquiry
+                        </label>
+
+                        <textarea
+                            class="custom-input"
+                            rows="5"
+                            placeholder="How can we help you?"
+                            required>
+                        </textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary btn-block">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- CONTACT INFO -->
+
+            <div class="contact-info-card">
+
+                <h3>
+                    Customer Service Hub
+                </h3>
+
+                <p class="text-muted-custom">
+                    Our customer service team is ready to help.
+                </p>
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-location-dot gold-icon"></i>
+
+                    <div>
+
+                        <strong>
+                            Headquarters & Showroom
+                        </strong>
+
+                        <p>
+                            First Settlement,
+                            New Cairo, Cairo, Egypt
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-envelope gold-icon"></i>
+
+                    <div>
+
+                        <strong>
+                            Email Support
+                        </strong>
+
+                        <p>
+                            support@denamakeupforever.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-phone gold-icon"></i>
+
+                    <div>
+
+                        <strong>
+                            Phone / WhatsApp
+                        </strong>
+
+                        <p>
+                            +201060160451
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-clock gold-icon"></i>
+
+                    <div>
+
+                        <strong>
+                            Operating Hours
+                        </strong>
+
+                        <p>
+                            Sunday – Thursday:
+                            10:00 AM – 10:00 PM
+                            <br>
+                            Friday – Saturday:
+                            1:00 PM – 11:00 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="products.js"></script>
+
+</body>
+</html>
